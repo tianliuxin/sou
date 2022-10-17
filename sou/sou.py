@@ -2,8 +2,7 @@ import argparse
 from subprocess import run
 
 from sou import config
-
-
+# import config
 
 
 def parse_args():
