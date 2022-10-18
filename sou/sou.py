@@ -1,5 +1,5 @@
 import argparse
-from subprocess import run
+from subprocess import Popen
 
 from sou import config
 # import config
@@ -35,7 +35,7 @@ class Sou:
         # 使用list形式的表达式而不是shell形式的表达式,第一个参数是应用的路径
         # 这里表达是用xxx执行xxx,交给shell是先解析,再根据解析的xxx去执行xxx,解析有时候会因为转义问题造成意向之外的结果
         # 因此更加推荐用list形式的表达式
-        run([self.app,link])
+        Popen([self.app,link])
 
     def _search_default(self):
         self.search_link(self.engine['base_url'])
